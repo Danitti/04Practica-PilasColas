@@ -14,8 +14,13 @@ def equilibrados(texto: str) -> bool:
             if (pila_cierres == deque([])):
                 return False
             elemento_pila = pila_cierres[0]
-            if (elemento_pila == "(" and elemento != ")") or (elemento_pila == "{" and elemento != "}") or (elemento_pila == "[" and elemento != "]"):
+            if (elemento_pila == "(" and elemento != ")"):
                 return False
+            elif (elemento_pila == "{" and elemento != "}"):
+                return False
+            elif (elemento_pila == "[" and elemento != "]"):
+                return False
+            
             pila_cierres.popleft()
     
     if (pila_cierres == deque([])):
