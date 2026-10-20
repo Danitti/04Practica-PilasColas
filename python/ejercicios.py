@@ -10,7 +10,7 @@ def equilibrados(texto: str) -> bool: # Complejidad O(1)
             pila_cierres.appendleft(elemento)
             continue
         
-        if elemento == ")" or elemento == "}" or elemento == "]":
+        elif elemento == ")" or elemento == "}" or elemento == "]":
             if (pila_cierres == deque([])):
                 return False
             elemento_pila = pila_cierres[0]
