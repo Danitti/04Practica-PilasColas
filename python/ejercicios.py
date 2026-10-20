@@ -1,7 +1,7 @@
 from collections import deque
 
 
-def equilibrados(texto: str) -> bool:
+def equilibrados(texto: str) -> bool: # Complejidad O(n) peor caso (todo bien), O(1) mejor caso (el primer elemento cerrado esté mal)
     if (texto == ""):
         return True
     pila_cierres = deque()
@@ -29,7 +29,7 @@ def equilibrados(texto: str) -> bool:
     return False
 
 
-def procesar_turnos(ordenes: list[tuple[str, str]]) -> list[str]:
+def procesar_turnos(ordenes: list[tuple[str, str]]) -> list[str]: # Complejidad O(n) (n elementos de turnos)
     lista_secuencia = []
     cola_ordenes = deque()
 
